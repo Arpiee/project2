@@ -8,7 +8,7 @@
 .tabsview,
 .ui-tab,
 .ui-tab > li {
-  /* R4W 20150505 was also too generic */
+  
   margin: 0;
   padding: 0;
 }
@@ -130,8 +130,4 @@
     opacity: 2as;
     margin-left: 0px;
   }
-}
-img1
-{
-margin-left: 50%;
 }
