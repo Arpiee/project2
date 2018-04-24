@@ -1,0 +1,137 @@
+#wrapper {
+  margin: 30px auto;
+  width: 80%;
+  background-color: #5cb1d3;
+  padding: 30px;
+  position: relative;
+}
+.tabsview,
+.ui-tab,
+.ui-tab > li {
+  /* R4W 20150505 was also too generic */
+  margin: 0;
+  padding: 0;
+}
+.tabsview {
+  width: auto;
+  background: transparent;
+}
+.ui-tab {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+.ui-tab li {
+  display: table-cell;
+  text-align: center;
+  position: relative;
+  bottom: -1px;
+  float: none;
+  margin-right: 5px;
+  font-size: 20px;
+}
+.ui-tab li a {
+  text-decoration: none;
+  display: block;
+  padding: 6px 10px 5px;
+  color: #882e2e;
+}
+.ui-tab li a:hover,
+.ui-tab li a:focus {
+  color: #000000;
+}
+.ui-tab li.active {
+  bottom: -2px;
+  background-color: #a32d2d;
+  border-bottom: 1px solid #efefef;
+  z-index: 20;
+  text-shadow: 1px 1px 1px #413d3d;
+}
+.ui-tab li.active a {
+  cursor: default;
+  text-decoration: none;
+  padding-top: 12px;
+  color: black;
+}
+.tab-pane {
+  padding: 20px;
+  background-color: #c5b8b891;
+  min-height: 200px;
+  color: #000000;
+}
+.tab-pane.active {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.tab-pane .tabContent {
+  width: 80%;
+  font-size: 40px;
+  color: #888888;
+  text-align: center;
+  animation: fadein 4s;
+  -moz-animation: fadein 4s;
+  /* Firefox */
+  -webkit-animation: fadein 4s;
+  /* Safari and Chrome */
+  -o-animation: fadein 4s;
+  /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -40px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -40px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -40px;
+  }
+  to {
+    opacity: 2;
+    margin-left: 0px;
+  }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+    margin-left: -40px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 1;
+    margin-left: -40px;
+  }
+  to {
+    opacity: 2as;
+    margin-left: 0px;
+  }
+}
+img1
+{
+margin-left: 50%;
+}

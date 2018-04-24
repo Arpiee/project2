@@ -1,0 +1,124 @@
+@black: #000000;
+@white: #ffffff;
+@darkgrey: #888888;
+@lightgrey: #efefef;
+@deepred: #8E0000;
+
+@background-color: @white;
+@tab-color: @lightgrey;
+@font-color: @darkgrey;
+@tab-min-width: 150px;
+@tab-panel-min-height: 200px;
+
+#wrapper{
+	margin:30px auto;
+	width:80%;
+	background-color: @background-color;
+	padding: 30px;
+	position: relative;
+}
+
+.tabsview, .ui-tab, .ui-tab > li { /* R4W 20150505 was also too generic */
+	margin: 0;
+	padding: 0;
+}
+.tabsview {
+	width: auto;
+	background: transparent;
+}
+
+.ui-tab {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+
+	li {
+		display: table-cell;
+		text-align: center;
+		position: relative;
+		bottom: -1px;
+		float: none;
+		margin-right: 5px;
+		font-size: 20px;
+		
+		a {
+			text-decoration: none;
+			display: block;
+			padding: 6px 10px 5px;
+			color: @font-color;
+		}
+		a:hover, a:focus {
+			color: @black;
+		}
+	}
+	li.active {
+		bottom: -2px;
+		background-color: @tab-color;
+		border-bottom: 1px solid @tab-color;
+		z-index: 20;
+		text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+		
+		a {
+			cursor: default;
+			text-decoration: none;
+			padding-top: 12px;
+			color: black;
+		}
+	}
+
+}
+
+.tab-pane {
+	padding:20px;
+	background-color: @tab-color;
+	min-height: @tab-panel-min-height;
+	color: @black;
+	
+	&.active{
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.tabContent{
+		width: 80%;
+		font-size:40px;
+		color: @font-color;
+		text-align: center;
+		
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+	}
+}
+
+// Keyframes
+@keyframes fadein {
+    from { opacity: 0; margin-left:-40px; }
+    to   { opacity: 1; margin-left:0px; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; margin-left:-40px; }
+    to   { opacity: 1; margin-left:0px; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; margin-left:-40px; }
+    to   { opacity: 1; margin-left:0px; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; margin-left:-40px; }
+    to   { opacity: 1; margin-left:0px; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; margin-left:-40px; }
+    to   { opacity: 1; margin-left:0px; }
+}
